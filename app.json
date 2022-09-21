@@ -7,8 +7,8 @@
     "affiliate"
   ],
   "success_url": "/welcome",
-  "website": "https://github.com/jakeedot",
-  "repository": "https://github.com/jakeedot/telegram-affiliate-bot",
+  "website": "https://github.com/infotrackcom",
+  "repository": "https://github.com/infotrackcom/affiliaters-bot",
   "env": {
     "affiliate_tag": {
       "description": "Your affiliate amazon tag",
