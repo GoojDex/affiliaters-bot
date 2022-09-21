@@ -35,7 +35,7 @@ If you want to create your own bot, fork this repo and use it as your source rep
 
 #### Deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/Jakeedot/telegram-affiliate-bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/infotrackcom/affiliaters-bot)
 
 
 ## Useful links
