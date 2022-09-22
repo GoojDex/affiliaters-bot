@@ -1,9 +1,8 @@
 /*
 telegram-bot-amazon
 
-Author: Luca Zorzi (@LucaTNT)
-Contributers:
- - Nitesh Sahni (@nsniteshsahni)
+Author: infotrackcom
+
 License: MIT
 */
 
@@ -406,7 +405,7 @@ bot.on("message", async (msg) => {
     }
   } catch (e) {
     log(
-      "ERROR, please file a bug report at https://github.com/LucaTNT/telegram-bot-amazon"
+      "ERROR, please file a bug report at https://github.com/infotrackcom/affiliaters-bot"
     );
     console.log(e);
   }
