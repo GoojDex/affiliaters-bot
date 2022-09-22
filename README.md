@@ -1,4 +1,4 @@
-[![](https://img.shields.io/github/issues/lucatnt/telegram-bot-amazon.svg)](https://github.com/LucaTNT/telegram-bot-amazon/issues) [![](https://img.shields.io/github/issues-pr-raw/lucatnt/telegram-bot-amazon.svg)](https://github.com/LucaTNT/telegram-bot-amazon/pulls) [![](https://img.shields.io/docker/pulls/lucatnt/telegram-bot-amazon.svg)](https://hub.docker.com/r/lucatnt/telegram-bot-amazon) [![](https://img.shields.io/docker/cloud/build/lucatnt/telegram-bot-amazon.svg)](https://hub.docker.com/r/lucatnt/telegram-bot-amazon) [![](https://img.shields.io/docker/image-size/lucatnt/telegram-bot-amazon/latest.svg)](https://hub.docker.com/r/lucatnt/telegram-bot-amazon)
+
 
 This is a Telegram bot that, if made admin of a group, will delete any message
 containing an Amazon link and re-post it tagged with the specified affiliate tag.
@@ -25,7 +25,7 @@ You can set two optional parameters through environment variables:
 - `CHECK_FOR_REDIRECT_CHAINS`: if set to `"true"` the bot will perform a recursive search for redirects. This allows it to catch Amazon URLs even if they are hidden behind a chain of redirects. This will slow down the processing of redirects.
 - `MAX_REDIRECT_CHAIN_DEPTH`: if `CHECK_FOR_REDIRECT_CHAINS` is enabled, it will limit the number of redirect levels the bot will try to go through. It default to 2, and it should be kept at a low number to avoid wasting time going through endless redirect chains a user might provide.
 - `IGNORE_USERS`: a comma-separated list of usernames (starting with the "@" character) and numeric user IDs whose messages won't be acted upon by the bot, even if they contain matching Amazon links. A valid list would be `"@Yourusername,12345678,@IgnoreMeAsWell123"`. Numeric user IDs are useful for users who do not have Telegram user names defined. You can get yours by contacting [userinfobot](https://t.me/useridinfobot).
-- `CHANNEL_NAME`: the name of a channel to relay affiliated links to. You must first add your bot as an admin for that channel. Feature added by adapting [@nsniteshsahni's commit](https://github.com/nsniteshsahni/telegram-bot-amazon/commit/b1b814083c83089f44293adbd622ac87be8f19e8)
+- `CHANNEL_NAME`: the name of a channel to relay affiliated links to. You must first add your bot as an admin for that channel. Feature added by adapting [@infotrackcom's commit](https://github.com/infotrackcom/affiliaters-bot/commit/b1b814083c83089f44293adbd622ac87be8f19e8)
 
 | String               | Replacement                                                                                                                |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -41,6 +41,6 @@ You can either run the app directly through NodeJS
 
 Or you can run it in Docker
 
-    docker run -e TELEGRAM_BOT_TOKEN=your-token -e AMAZON_TAG=your-tag --init lucatnt/telegram-bot-amazon
+    docker run -e TELEGRAM_BOT_TOKEN=your-token -e AMAZON_TAG=your-tag --init infotrackcom/affiliaters-bot
 
 Note that the `--init` option is highly recommended because it allows you to stop the container through a simple Ctrl+C when running in the foreground. Without it you need to use `docker stop`.
